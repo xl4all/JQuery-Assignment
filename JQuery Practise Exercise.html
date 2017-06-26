@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery Practice Exercise</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+	</script>
+
+	<script>
+
+	$(document).ready(function(){
+
+		 	$("h1").click(function() {
+		  	$("#logo").fadeIn("slow");
+		  	$("#hiddenheaders").fadeIn("slow"); 
+		 	});
+
+		 	$("h2").click(function() {
+		  	$(this).slideUp( 300 ).delay( 800 ).fadeIn( 600 );
+		  	});
+
+		 	$("h3").dblclick(function() {
+		   	alert( "Syntax error!" );
+		 	});
+
+		 	 $("h4").click(function(){
+		    $("#logo").fadeOut();
+		    });
+
+		 	  $("h5").click(function(){
+		    $("h6").animate({left: '500px'});
+		    });
+
+		 	   $("h6").click(function(){
+		    $(this).animate({left: '0px'});
+		    $(this).animate({left: '500px'});
+		    $(this).animate({left: '0px'});
+		    }); 
+
+	});
+
+
+
+	</script>
+	
+	<style>
+
+	ul {
+    /*color: red;*/
+    /*margin: 5px;*/
+    padding-right:  300px;
+    cursor: pointer;
+  	}
+
+  	h3:hover {
+    background: yellow;
+  	}
+
+  	#logo {
+  		display: none;
+  	}
+
+  	#hiddenheaders	{	
+  		display: none;	
+  	}
+
+	h6{
+	position: relative;
+	}
+
+	#audio controls{	
+	margin-right: 500px;
+	}
+
+  	</style>
+</head>
+
+<body>
+	
+	<img id="logo" src="https://bitstorm.org/edwin/jquery-presentatie/pix/jquery_logo_color_onwhite.png">
+		
+	<ul>
+		<h1>JQuery Practice h1, click me!</h1>
+		<div id="hiddenheaders">
+		<h2>JQuery Practice h2, click me!</h2>
+		<h3>JQuery Practise h3, hover en double click me!</h3>
+		<h4>JQuery Practise h4, click me!</h4>
+		<h5>JQuery Practise h5, click me!</h5>
+		<h6>JQuery Practise h6, click me!</h6>
+		</div>
+	</ul>
+	
+	<p>XL & Tisha - ABC</p>
+	
+	<audio controls>
+  		<source src="audio/XL&Tisha-ABC.mp3" type="audio/mpeg">
+		Your browser does not support the audio element.
+	</audio>
+
+	<a href="https://jquery.com/" target="_new">JQuery.com</a>
+</body>
+
+</html>
+
